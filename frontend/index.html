@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <nav class="navbar">Mini-Raft</nav>
+    <div class="Workspace">
+        <div class = "left-panel">
+            
+            <!-- SectionA -->
+            <div class="section">
+                <div class="section-title">TOOLS</div>
+
+                <button class="tool-btn active" onclick="setTool('pen' , event)">Pen</button>
+                <button class="tool-btn" onclick="setTool('eraser' , event)">Eraser</button>
+                <button class="tool-btn" onclick="setTool('line' , event)">Line</button>
+                <button class="tool-btn" onclick="setTool('rect' , event)">Rectangle</button>
+                <button class="tool-btn" onclick="setTool('circle' , event)">Circle</button>
+            </div>
+
+
+            <!-- SectionB -->
+            <div class="section">
+                <div class="section-title">COLOR</div>
+
+                <div class="color-grid">
+                    <!-- color cells go here -->
+                </div>
+            </div>
+            
+            <div class="stroke-section">
+                <div class="section-title">STROKE WIDTH</div>
+
+                <div class="stroke-info">
+                    <span>Size</span>
+                    <span id="stroke-value">4px</span>
+                </div>
+
+                <input
+                    class="slider"
+                    id="stroke-slider"
+                    type="range"
+                    min="1"
+                    max="50"
+                    value="4"
+                />
+            </div>
+            
+            <div class="opacity-section">
+                <div class="section-title">OPACITY</div>
+
+                <div class="stroke-info">
+                    <span>Alpha</span>
+                    <span id="opacity-value">100%</span>
+                </div>
+
+                <input
+                    class="slider"
+                    id="opacity-slider"
+                    type="range"
+                    min="0"
+                    max="100"
+                    value="100"
+                />
+            </div>
+        </div>
+
+        <!-- SectionC -->
+        <div class="canvas-area">
+             <canvas class = "demo"></canvas>
+             <script src = "canvas.js"></script>
+
+        </div>
+
+        
+        <div class = "right-panel">
+            <div>Users</div>
+        </div>
+    </div>
+</body>
+</html>
